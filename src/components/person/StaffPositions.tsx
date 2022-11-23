@@ -61,7 +61,7 @@ export const StaffPositions: FC<VoiceActorsOnCharacterProps> = ({
           gap="4"
         >
           {getStaffPositions().length === 0 && (
-            <Box>No characters yet, add one</Box>
+            <Box>No Staffs yet, add one</Box>
           )}
           {getStaffPositions().map(({ personId, anime, positions }) => (
             <GridItem

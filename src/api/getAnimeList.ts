@@ -18,9 +18,9 @@ type AnimeResponse = {
   status: number;
   data: {
     pagination: {
-      total_anime: number;
-      total_pages: number;
-      current_page: number;
+      totalAnime: number;
+      totalPages: number;
+      currentPage: number;
     };
     anime: AnimeModel[];
   };

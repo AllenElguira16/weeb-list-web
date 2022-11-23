@@ -37,8 +37,8 @@ const HomePage: NextPage = () => {
     hasNextPage,
     fetchNextPage,
   } = useInfiniteQuery(['animeData'], fetchInfiniteAnime, {
-    getNextPageParam({ pagination: { current_page, total_pages } }) {
-      return current_page < total_pages ? current_page + 1 : undefined;
+    getNextPageParam({ pagination: { currentPage, totalPages } }) {
+      return currentPage < totalPages ? currentPage + 1 : undefined;
     },
   });
 
@@ -75,8 +75,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
   );
 
   await queryClient.prefetchInfiniteQuery(['animeData'], fetchInfiniteAnime, {
-    getNextPageParam({ pagination: { current_page, total_pages } }) {
-      return current_page < total_pages ? current_page + 1 : undefined;
+    getNextPageParam({ pagination: { currentPage, totalPages } }) {
+      return currentPage < totalPages ? currentPage + 1 : undefined;
     },
   });
 
